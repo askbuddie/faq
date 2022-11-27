@@ -111,3 +111,6 @@ dist
 .vercel
 
 next-env.d.ts
+
+# vscode
+.vscode
