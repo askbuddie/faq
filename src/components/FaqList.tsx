@@ -7,8 +7,7 @@ const FaqList = () => {
   return (
     <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
       <ul>
-        {faqs?.map((faq) => {
-          const { title, date, link } = faq!;
+        {faqs?.map(({ title, date, link }) => {
           const { monthAndDay, year } = formatDate(date);
           return (
             <li className="flex items-center mb-4" key={link}>
