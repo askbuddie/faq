@@ -2,17 +2,18 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-type FAQProps = {
+export type FAQProps = {
   title: string;
   date: string;
   link: string;
+  content: string;
 };
 
 const MDX_EXTENSION = ".mdx";
 const POST_DIR = "faqs";
 const ROOT_DIR = "./";
 
-const faqGenerator = () => {
+export const faqGenerator = () => {
   const getFAQs = () => {
     const files = fs.readdirSync(path.join(ROOT_DIR, POST_DIR));
 
@@ -21,7 +22,7 @@ const faqGenerator = () => {
     }
 
     const mdxFiles = files.filter(
-      (file) => path.extname(file) === MDX_EXTENSION,
+      (file) => path.extname(file) === MDX_EXTENSION
     );
 
     const faqs = mdxFiles.map((file) => {
@@ -29,10 +30,10 @@ const faqGenerator = () => {
         encoding: "utf-8",
       });
 
-      const { data } = matter(source);
-
+      const { data, content } = matter(source);
       return {
         ...data,
+        content,
         link: file.replace(MDX_EXTENSION, ""),
       } as FAQProps;
     });
@@ -44,5 +45,3 @@ const faqGenerator = () => {
     getFAQs,
   };
 };
-
-export default faqGenerator;

@@ -1,4 +1,4 @@
-import faqGenerator from "../utils/faqGenerator";
+import { faqGenerator } from "../utils/faqGenerator";
 import formatDate from "../utils/formatDate";
 
 const FaqList = () => {
@@ -15,7 +15,7 @@ const FaqList = () => {
                 <p className="font-bold">{monthAndDay}</p>
                 <p className="text-xs">{year}</p>
               </span>
-              <a href="#">
+              <a href={link}>
                 <h2 className="text-2xl font-bold">{title}</h2>
               </a>
             </li>
