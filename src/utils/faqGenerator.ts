@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-type FAQProps = {
+export type FAQProps = {
   title: string;
   date: string;
   link: string;
@@ -21,7 +21,7 @@ const faqGenerator = () => {
     }
 
     const mdxFiles = files.filter(
-      (file) => path.extname(file) === MDX_EXTENSION,
+      (file) => path.extname(file) === MDX_EXTENSION
     );
 
     const faqs = mdxFiles.map((file) => {
