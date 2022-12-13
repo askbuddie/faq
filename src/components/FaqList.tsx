@@ -1,9 +1,11 @@
-import faqGenerator from "../utils/faqGenerator";
+import faqGenerator, { FAQProps } from "../utils/faqGenerator";
 import formatDate from "../utils/formatDate";
 
-const FaqList = () => {
-  const { getFAQs } = faqGenerator();
-  const faqs = getFAQs();
+type Props = {
+  faqs: FAQProps[];
+};
+
+const FaqList = ({ faqs }: Props) => {
   return (
     <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
       <ul>
