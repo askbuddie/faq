@@ -17,7 +17,7 @@ const FaqList = ({ faqs }: Props) => {
                 <p className="font-bold">{monthAndDay}</p>
                 <p className="text-xs">{year}</p>
               </span>
-              <a href="#">
+              <a href={`/faqs/${link}`}>
                 <h2 className="text-2xl font-bold">{title}</h2>
               </a>
             </li>

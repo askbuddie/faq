@@ -11,6 +11,8 @@
     "export": "next export"
   },
   "dependencies": {
+    "@mdx-js/loader": "^2.0.0-rc.2",
+    "@mdx-js/react": "^2.0.0-rc.2",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
@@ -18,9 +20,9 @@
     "eslint-config-next": "13.0.5",
     "gray-matter": "^4.0.3",
     "next": "13.0.5",
-    "next-mdx-remote": "^4.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "remark-frontmatter": "^4.0.1",
     "typescript": "4.9.3"
   },
   "devDependencies": {
