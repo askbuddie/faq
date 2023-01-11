@@ -9,8 +9,8 @@ export type FAQProps = {
 };
 
 const MDX_EXTENSION = ".mdx";
-const POST_DIR = "faqs";
-const ROOT_DIR = "./";
+const POST_DIR = "/faqs";
+const ROOT_DIR = "./src/pages/";
 
 const faqGenerator = () => {
   const getFAQs = () => {
